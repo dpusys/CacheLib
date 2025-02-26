@@ -13,6 +13,16 @@ The primary dependecies are:
 * [https://github.com/facebook/folly](folly) - Facebook's Open Source library
 * [https://github.com/facebook/fbthrift](FBThrift) - Facebook Thrift
 
+For folly, modify CMake/FindFastFloat.cmake to set the path of FASTFLOAT_INCLUDE_DIR: 
+```.cmake
+-find_path(FASTFLOAT_INCLUDE_DIR NAMES fast_float/fast_float.h)
++find_path(FASTFLOAT_INCLUDE_DIR NAMES fast_float/fast_float.h
++       PATHS /home/dc/deps/fast_float/include
++       DOC "FastFloat include directory")
+```
+
+For fbthrift, may need to create a directory */conformance/if.
+
 These dependencies further require multiple libraries:
 
 * [https://github.com/facebookincubator/fizz](fizz) - Facebook's TLS 1.3 implementation

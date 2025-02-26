@@ -119,7 +119,7 @@ case "$1" in
     REPODIR=cachelib/external/$NAME
     SRCDIR=$REPODIR
     external_git_clone=yes
-    external_git_tag="v0.5.0"
+    external_git_tag="v0.4.0"
     cmake_custom_params="-DBUILD_SHARED_LIBS=ON"
     ;;
 
